@@ -1,0 +1,21 @@
+<!doctype html>
+<title>Document Semantic Search</title>
+<h1>Search Document</h1>
+<p>User ID: <strong>{{ user_id }}</strong></p>
+
+<form method="post" action="/process_search" enctype="multipart/form-data">
+  <!-- Hidden field to pass the user ID -->
+  <input type="hidden" name="user_id" value="{{ user_id }}">
+  
+  <label for="document">Upload PDF or DOCX:</label><br>
+  <input type="file" id="document" name="document" accept=".pdf,.docx" required><br><br>
+  
+  <label for="search_text">Text to Search For:</label><br>
+  <input type="text" id="search_text" name="search_text" size="50" required><br><br>
+  
+  <label for="similarity_threshold">Similarity Threshold (0.0 to 1.0, default 0.7):</label><br>
+  <input type="number" step="0.01" min="0.0" max="1.0" name="similarity_threshold" value="0.7"><br><br>
+  
+  <input type="submit" value="Search Document">
+</form>
+<p><a href="/">Change User/Logout</a></p>

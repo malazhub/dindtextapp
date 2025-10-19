@@ -31,4 +31,4 @@ ENV PORT 8080
 # Use Gunicorn to run the Flask application
 # The workers count (1-4) should be adjusted based on memory usage.
 # We set high memory in the deployment step because of pandas/sklearn.
-CMD exec gunicorn --bind :$PORT --workers 2 --threads 4 app:app
+CMD exec gunicorn --bind :$PORT --workers 2 --threads 4 findtext:app

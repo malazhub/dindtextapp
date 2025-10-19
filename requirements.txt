@@ -4,5 +4,5 @@ PyMuPDF
 python-docx
 scikit-learn
 pandas
-google-cloud-firestore  # New: For storing usage data
-sendgrid                # New: For sending emails (replace if using a different provider)
+google-cloud-firestore
+sendgrid
