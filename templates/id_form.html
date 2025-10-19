@@ -1,0 +1,12 @@
+<!doctype html>
+<title>FindText Login</title>
+<h1>Welcome to FindText</h1>
+<p>Please enter your email or mobile number to proceed. (Limit: {{ MAX_ATTEMPTS }} tries)</p>
+<form method="post" action="/upload">
+  <label for="user_id">Email or Mobile (+96170647081):</label><br>
+  <input type="text" id="user_id" name="user_id" required><br><br>
+  <input type="submit" value="Start Search">
+</form>
+{% if error %}
+    <p style="color: red;">{{ error }}</p>
+{% endif %}
