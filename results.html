@@ -1,0 +1,14 @@
+# Replace YOUR_SENDGRID_KEY with your actual API key
+# Replace YOUR_ADMIN_EMAIL with your chosen admin address (malazjanbeih@gmail.com)
+
+gcloud run deploy doc-searcher-service \
+  --image gcr.io/${PROJECT_ID}/doc-searcher-service \
+  --platform managed \
+  --region us-central1 \
+  --allow-unauthenticated \
+  --memory 2Gi \
+  --cpu 2 \
+  --min-instances 0 \
+  --max-instances 10 \
+  --timeout 300 \
+  --set-env-vars ADMIN_EMAIL=malazjanbeih@gmail.com,SENDGRID_API_KEY=YOUR_SENDGRID_KEY_HERE
